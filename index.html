@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Directorio de Restaurantes</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Directorio de Restaurantes</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="busqueda.html">Búsqueda de Restaurantes</a></li>
+        <li><a href="nuevo.html">Nuevo Restaurante</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Página de Inicio -->
+    <div id="inicio">
+      <h2>Inicio</h2>
+      <div id="restaurantes-lista"></div>
+    </div>
+
+    <!-- Página de Búsqueda de Restaurantes -->
+    <div id="busqueda" style="display: none;">
+      <h2>Búsqueda de Restaurantes</h2>
+      <form>
+        <label for="nombre-busqueda">Buscar por nombre:</label>
+        <input type="text" id="nombre-busqueda" name="nombre-busqueda">
+        <button type="button" onclick="buscarRestaurantes()">Buscar</button>
+      </form>
+      <div id="resultados-busqueda"></div>
+    </div>
+
+    <!-- Página de Nuevo Restaurante -->
+    <div id="nuevo" style="display: none;">
+      <h2>Nuevo Restaurante</h2>
+      <form>
+        <label for="nombre-nuevo">Nombre:</label>
+        <input type="text" id="nombre-nuevo" name="nombre-nuevo" required>
+        <label for="descripcion-nuevo">Descripción:</label>
+        <textarea id="descripcion-nuevo" name="descripcion-nuevo" required></textarea>
+        <label for="direccion-nuevo">Dirección:</label>
+        <input type="text" id="direccion-nuevo" name="direccion-nuevo" required>
+        <label for="imagen-nuevo">URL de la imagen:</label>
+        <input type="text" id="imagen-nuevo" name="imagen-nuevo" required>
+        <button type="button" onclick="guardarRestaurante()">Guardar</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
